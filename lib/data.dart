@@ -19,6 +19,9 @@ class Trail {
   final String TR_TOUR;
   final String TR_BEST_SEASON;
   final String TR_SPECIAL;
+  final String TR_INTRO;
+  final String TR_IMAGE;
+  final String TR_BANNER;
 
   Trail(
       {this.TRAILID,
@@ -36,7 +39,10 @@ class Trail {
       this.TR_DIF_CLASS,
       this.TR_TOUR,
       this.TR_BEST_SEASON,
-      this.TR_SPECIAL});
+      this.TR_SPECIAL,
+      this.TR_INTRO,
+      this.TR_IMAGE,
+      this.TR_BANNER});
 }
 
 List<Trail> getTrailsSample() {
@@ -57,7 +63,8 @@ List<Trail> getTrailsSample() {
         TR_DIF_CLASS: "2",
         TR_TOUR: "1日",
         TR_BEST_SEASON: "四季皆宜",
-        TR_SPECIAL: ""),
+        TR_SPECIAL: ""
+    ),
     Trail(
         TRAILID: "002",
         TR_CNAME: "南澳古道",
@@ -105,6 +112,10 @@ Future<List<Trail>> getTrailFromJson() async {
       TR_TOUR: row['TR_TOUR'],
       TR_BEST_SEASON: row['TR_BEST_SEASON'],
       TR_SPECIAL: row['TR_SPECIAL'],
+      TR_INTRO: row['TR_INTRO'],
+      TR_IMAGE: row['TR_IMAGE'],
+      TR_BANNER: row['TR_BANNER'],
+
     );
   }).toList();
 }
